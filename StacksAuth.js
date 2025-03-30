@@ -13,7 +13,6 @@ namespace StacksAuth {
 	const var publicKey = "YOUR-PUBLIC-KEY-HERE";
 
 	 inline function authenticate(){ 
-		Console.print("Authenticating");
 	 	lastErrorCode = null;
 	 	
 		homeDir = FileSystem.getFolder(FileSystem.UserHome).toString(0);

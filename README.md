@@ -1,8 +1,8 @@
-**HISE Stacks Auth**
+# HISE Stacks Auth
 
 This repository reflects the latest official means of implementing Stacks Authentication into audio plugins built with HISE. It is designed to be lightweight and generic so that the plugin developer can implement it into their project regardless of current structure.
 
-**Getting Started**
+## Getting Started
 
 1. Copy the `StacksAuth.js` file in this repository into your HISE project's `Scripts` folder.
 
@@ -10,23 +10,24 @@ This repository reflects the latest official means of implementing Stacks Authen
 
 3. Change the `publicKey` variable on line 13 to your public RSA key. You may use an existing key if you have one, or you can generate a new RSA key pair for use in Stacks.
 
-**Implementation Guide**
+## Implementation Guide
 
 Once you've updated the values in `StacksAuth.js`, you can import the `StacksAuth` namespace wherever you prefer using the line `include("StacksAuth.js");`. There are two utility functions provided:
 
 1. `StacksAuth.authenticate()`
+
    - Returns a boolean value reflecting whether the user can access the product.
-  
+
 2. `StacksAuth.getLastErrorMessage()`
    - Returns a string value detailing the reason for failure in the last call to `authenticate()`.
-  
+
 A basic example is provided in `Example.js`, conditionally rendering one of two panels and updating an error label in the case of failure in the `onInit()` callback of the Interface. There are no restrictions on where or how you choose to implement.
 
-**Testing**
+## Testing
 
 There are two ways to test your Stacks Auth integration:
 
-**Testing without a Stacks Account**
+### Testing without a Stacks Account
 
 If your product has not been published to Stacks, you can mimic the behavior of the Stacks licenser with the following steps:
 
@@ -37,7 +38,7 @@ If your product has not been published to Stacks, you can mimic the behavior of 
 4. Paste the console output of step 2 into the new file and save.
 5. You should now pass the authentication check.
 
-**Testing with a Stacks Account**
+### Testing with a Stacks Account
 
 If you're already set up your brand on Stacks, you can test like so:
 
@@ -49,5 +50,3 @@ If you're already set up your brand on Stacks, you can test like so:
 6. In the Stacks App, navigate to your product. As a manager of the product, you should see an option to add to your stack if you haven't already.
 7. Download from the My Stack page.
 8. Open your plugin. You should now pass the authentication check. Sometimes it may take up to a minute before the auth file is written. Stacks will continue to update it on a daily basis in the background, regardless of whether the app is open or not.
-9. 
-
