@@ -25,29 +25,7 @@ A basic example is provided in `Example.js`, conditionally rendering one of two 
 
 ## Testing
 
-There are two ways to test your Stacks Auth integration:
-
-### Testing without a Stacks Account
-
-If your product has not been published to Stacks, you can mimic the behavior of the Stacks licenser with the following steps:
-
-1. Get the value of HISE's `FileSystem.getSystemId()` method on the device being used for testing.
-
-2. Run `test.js` as a node script with the `deviceId` variable changed to the value derived from step 1 and the `privateKey` variable changed to your private RSA key.
-
-   - You can do this by navigating to the file's parent directory in a terminal window and running `node test.js`.
-
-3. Create a file called `product-id.authfile` (where `product-id` is the product id you provided in `StacksAuth.js`) inside of `/Users/username/Music/StacksAppFiles/` on MacOS or `C:\Users\username\Music\StacksAppFiles\` on Windows.
-
-4. Paste the console output of step 2 into the new file and save.
-
-5. You should now pass the authentication check.
-
-### Testing with a Stacks Account
-
-If you're already set up your brand on Stacks, you can test like so:
-
-1. From your brand's page, select or create a new product.
+1. From your brand's page on Stacks, select or create a new product.
 
 2. In the 'versions' tab, create a new version for testing. You can delete it later. Check the 'Use Stacks Auth' checkbox, and select HISE v2 from the version dropdown.
 
