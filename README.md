@@ -35,8 +35,10 @@ A basic example is provided in `Example.js`, conditionally rendering one of two 
 
 5. Add the version.
 
-6. In the Stacks App, navigate to your product. As a manager of the product, you should see an option to add to your stack if you haven't already.
+6. Before exiting the versions tab, click the 'Add RSA Key' button and paste in your RSA private key (including the -----BEGIN RSA PRIVATE KEY----- and -----END RSA PRIVATE KEY----- parts). This value is stored securely in Stacks' servers. It can be updated at any time but cannot be read again after being set. We recommend retaining your own copy in a secure location only you and trusted brand members can access.
 
-7. Download from the My Stack page.
+7. In the Stacks App, navigate to your product. As a manager of the product, you should see an option to add to your stack if you haven't already.
 
-8. Open your plugin. You should now pass the authentication check. Sometimes it may take up to a minute before the auth file is written. Stacks will continue to update it on a daily basis in the background, regardless of whether the app is open or not.
+8. Download from the My Stack page.
+
+9. Open your plugin. You should now pass the authentication check. Sometimes it may take up to a minute before the auth file is written. Stacks will continue to update it on a daily basis in the background, regardless of whether the app is open or not.
