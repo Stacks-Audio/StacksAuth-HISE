@@ -51,10 +51,11 @@ namespace StacksAuth {
 		if (jsonPayload.exp == null || typeof jsonpayload.exp != "number"){
 			// error code 3: InvalidDate
 			lastErrorCode = "InvalidDate";
+			return false;
 		}
 		
 		
-		if (jsonPayload.exp == null || Date.getSystemTimeMs() >= jsonPayload.exp) {
+		if (Date.getSystemTimeMs() >= jsonPayload.exp) {
 			// error code 4: LicenseExpired
 			lastErrorCode = "LicenseExpired";
 			return false;
@@ -62,7 +63,7 @@ namespace StacksAuth {
 		
 		if (jsonPayload.deviceId != FileSystem.getSystemId()){
 			// error code 5: Mismatched device id
-			lastErrorCode = "MismatchedDeviceId";
+			lastErrorCode = "MismatchedDeviceID";
 			return false;
 		}
 		
