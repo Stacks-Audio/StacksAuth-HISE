@@ -1,4 +1,4 @@
-# HISE Stacks Auth
+# STACKS Auth - HISE
 
 This repository reflects the latest official means of implementing Stacks Authentication into audio plugins built with HISE. It is designed to be lightweight and generic so that the plugin developer can implement it into their project regardless of current structure.
 
