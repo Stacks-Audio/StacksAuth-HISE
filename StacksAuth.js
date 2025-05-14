@@ -48,7 +48,7 @@ namespace StacksAuth {
 			return false;
 		}
 
-		if (jsonPayload.exp == null || typeof jsonpayload.exp != "number"){
+		if (jsonPayload.exp == null || typeof jsonPayload.exp != "number"){
 			// error code 3: InvalidDate
 			lastErrorCode = "InvalidDate";
 			return false;
